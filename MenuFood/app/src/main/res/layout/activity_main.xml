@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/taco_img"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Taco Pronto"
+        android:textSize="35sp"
+        app:layout_constraintLeft_toRightOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:id="@+id/brand"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123 HoChiMinh City"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/brand"
+        app:layout_constraintLeft_toLeftOf="@+id/brand"
+        android:id="@+id/address">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0909845621"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:layout_constraintLeft_toLeftOf="@+id/address"
+        android:id="@+id/phone">
+    </TextView>
+
+    <Button
+        android:background="@drawable/custom_button"
+        android:id="@+id/buttonSize"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/buttonTortilla">
+    </Button>
+    <Button
+        android:background="@drawable/custom_button"
+        android:id="@+id/buttonTortilla"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tortilla"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintTop_toTopOf="@id/buttonSize"
+        app:layout_constraintLeft_toRightOf="@id/buttonSize"
+        app:layout_constraintRight_toRightOf="parent">
+    </Button>
+
+    <RadioGroup
+        android:id="@+id/groupSize"
+        app:layout_constraintLeft_toLeftOf="@id/buttonSize"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/largeSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Large">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/mediumSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium">
+        </RadioButton>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/groupTortilla"
+        app:layout_constraintLeft_toLeftOf="@id/buttonTortilla"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/corn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Corn">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/flour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flour">
+        </RadioButton>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/fillings"
+        app:layout_constraintLeft_toLeftOf="@id/buttonSize"
+        app:layout_constraintRight_toRightOf="@id/buttonTortilla"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:text="Fillings"
+        app:layout_constraintTop_toBottomOf="@+id/groupSize">
+    </Button>
+
+    <CheckBox
+        android:id="@+id/beef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beef"
+        app:layout_constraintLeft_toLeftOf="@id/fillings"
+        app:layout_constraintTop_toBottomOf="@+id/fillings">
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/chicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chicken"
+        app:layout_constraintLeft_toLeftOf="@id/fillings"
+        app:layout_constraintTop_toBottomOf="@+id/beef">
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/riceBean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rice bean"
+        app:layout_constraintLeft_toLeftOf="@id/buttonTortilla"
+        app:layout_constraintTop_toBottomOf="@+id/fillings">
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/beans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beans"
+        app:layout_constraintLeft_toLeftOf="@id/buttonTortilla"
+        app:layout_constraintTop_toBottomOf="@+id/riceBean">
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/seaFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sea Food"
+        app:layout_constraintLeft_toLeftOf="@id/buttonTortilla"
+        app:layout_constraintTop_toBottomOf="@+id/beans">
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/whiteFish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="White Fish"
+        app:layout_constraintLeft_toLeftOf="@id/fillings"
+        app:layout_constraintTop_toBottomOf="@+id/chicken">
+    </CheckBox>
+
+    <Button
+        android:onClick="placeYourOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Place your order"
+        app:layout_constraintTop_toBottomOf="@id/whiteFish"
+        app:layout_constraintLeft_toLeftOf="@id/buttonSize"
+        app:layout_constraintRight_toRightOf="@id/buttonTortilla"
+        android:background="@color/colorAccent"
+        android:textColor="#fff">
+
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
