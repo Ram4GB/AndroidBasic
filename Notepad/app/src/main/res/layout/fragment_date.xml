@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <TextView
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Update"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/lastUpdate"></TextView>
+    <TextView
+        android:id="@+id/dateLastUpdate"
+        app:layout_constraintLeft_toLeftOf="@id/lastUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sat Feb 4, 10:15 AM"
+        app:layout_constraintTop_toBottomOf="@id/lastUpdate"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-condensed-medium">
+
+    </TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>
